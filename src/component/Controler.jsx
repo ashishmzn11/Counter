@@ -20,6 +20,10 @@ const Controler = () => {
     dispatch({ type: "SUB", payload: { num: addelement.current.value } });
     addelement.current.value = "";
   };
+  const handledInput = () => {
+    dispatch({ type: "INPUT"});
+    
+  };
   return (<>
     <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
       <input
@@ -42,6 +46,9 @@ const Controler = () => {
       </button>
       <button type="button" class="btn btn-dark" onClick={handleDiv}>
         Division
+      </button>
+      <button type="button" class="btn btn-dark" onClick={handledInput}>
+        Deleted
       </button>
     </div>
     </>

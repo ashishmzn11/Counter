@@ -13,6 +13,9 @@ const counterReducer=(store=INITIAL_VALUE,action)=>{
   else  if(action.type==='DIV'){
     return { counter: store.counter / Number(action.payload.num)};
   }
+  else  if(action.type==='INPUT'){
+    return { counter: 0};
+  }
   return store;
 }
 const counterStore=createStore(counterReducer);
